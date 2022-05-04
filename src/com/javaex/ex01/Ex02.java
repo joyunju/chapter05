@@ -16,7 +16,7 @@ public class Ex02 {
 		// 빨대
 		InputStream in = new FileInputStream("/Users/joyunju/javaStudy/file/img.jpg");
 		// 내보내기
-		OutputStream out = new FileOutputStream("/Users/joyunju/javaStudy/file/byteImg.jpg");
+		OutputStream out = new FileOutputStream("/Users/joyunju/javaStudy/file/byteBuffImg.jpg");
 		
 		byte[] buff = new byte[1024]; // 1024칸짜리 만듬
 
@@ -32,7 +32,6 @@ public class Ex02 {
 				break;
 			}
 
-			// 내보내기
 			out.write(buff);
 		}
 
