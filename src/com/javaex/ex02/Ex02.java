@@ -17,7 +17,7 @@ public class Ex02 {
 		BufferedReader br = new BufferedReader(fr);
 
 		while (true) {
-			String str = br.readLine(); // readLine() : 한줄씩 읽어온다. 줄바꿈 기호는 제외
+			String str = br.readLine();  // readLine() : 한줄씩 읽어온다. 줄바꿈 기호는 제외
 			
 			//null은 String 변수가 아무것도 가리 키지 않음을 의미
 			if (str == null) {
