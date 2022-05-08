@@ -15,8 +15,6 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.javaex.ex05.Person;
-
 public class Ex03 {
 	public static void main(String[] args) throws IOException {
 
