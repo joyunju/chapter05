@@ -10,12 +10,10 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.javaex.ex04.Person;
-
 public class Ex02 {
 	public static void main(String[] args) throws IOException {
 
-		List<Person> pList = new ArrayList<Person>();
+		List<PhoneDb> pList = new ArrayList<PhoneDb>();
 
 		// PhoneDB_원본.txt 읽어오기
 		Reader fr = new FileReader("/Users/joyunju/javaStudy/file/PhoneDB_원본.txt");
@@ -31,38 +29,40 @@ public class Ex02 {
 			}
 
 			// split(",")을 사용해서 ,를 기준으로 짜르기
-			// PersonInfo에서 받은 정보를 짜를 예정
-			String[] personInfo = str.split(",");
+			// phoneInfo에서 받은 정보를 짜를 예정
+			String[] phoneInfo = str.split(",");
 
-			String name = personInfo[0];
-			String hp = personInfo[1];
-			String company = personInfo[2];
+			String name = phoneInfo[0];
+			String hp = phoneInfo[1];
+			String company = phoneInfo[2];
 
 			// 출력 확인
 //			System.out.println(name);
 //			System.out.println(hp);
 //			System.out.println(company);
 
-			Person p = new Person(name, hp, company);
+			PhoneDb p = new PhoneDb(name, hp, company);
 			// 출력 확인
 			// System.out.println(p.toString());
 
-			// personList 배열에 집어넣어서 안사라지게 만들기
+			// pList 배열에 집어넣어서 안사라지게 만들기
 			pList.add(p);
+			
 
 		}
 
-		// personList 담긴 것 확인
+		// pList 담긴 것 확인
 		System.out.println(pList.toString());
 		System.out.println("====================");
 
-		// 향상된 반복문 사용해서 출력 
-		for (Person p : pList) {
+		// 향상된 반복문 사용해서 출력
+		for (PhoneDb p : pList) {
+//			System.out.println("이름 : " + p.getName());
 			p.showInfo();
 		}
 
 		br.close();
-		// fr.close();
+		//fr.close();
 
 	}
 

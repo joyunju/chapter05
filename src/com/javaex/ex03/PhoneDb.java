@@ -1,6 +1,6 @@
 package com.javaex.ex03;
 
-public class Person {
+public class PhoneDb {
 
 	// 필드
 	private String name;
@@ -9,11 +9,11 @@ public class Person {
 	
 	
 	//생성자
-	public Person() {
-		
+	public PhoneDb() {
+		//super();
 	}
-	public Person(String name, String hp, String company) {
-		super();
+	public PhoneDb(String name, String hp, String company) {
+		//super();
 		this.name = name;
 		this.hp = hp;
 		this.company = company;
